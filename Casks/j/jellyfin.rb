@@ -10,10 +10,7 @@ cask "jellyfin" do
   desc "Media system"
   homepage "https://jellyfin.org/"
 
-  livecheck do
-    url "https://repo.jellyfin.org/?path=/server/macos/latest-stable/#{arch}"
-    regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
-  end
+  deprecate! date: "2026-05-02", because: :discontinued
 
   depends_on macos: ">= :monterey"
 
